@@ -116,11 +116,7 @@ if st.button("Predict Delays"):
 
         st.write("Predicted Delay Reasons:")
         st.write(prediction_df)
-        fig_pie = go.Figure(data=[
-            go.Pie(labels=prediction_df.columns, values=prediction_df.iloc[0])
-        ])
-        fig_pie.update_layout(title='Predicted Delay Reasons Percentages')
-        st.plotly_chart(fig_pie)
+        
 
     except Exception as e:
         st.error(f"Error predicting delay reasons: {e}")
